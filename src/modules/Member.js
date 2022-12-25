@@ -1,4 +1,5 @@
 import { DataTypes, sequelize } from '../config/config.js'
+import { Band } from './Band.js'
 
 export const Member = sequelize.define('member', {
   id_member: {
@@ -22,4 +23,14 @@ export const Member = sequelize.define('member', {
     type: DataTypes.STRING,
     allowNull: false
   }
+})
+
+Band.hasMany(Member, {
+  foreignKey: 'bandId',
+  sourceKey: 'id_band'
+})
+
+Member.belongsTo(Band, {
+  foreignKey: 'bandId',
+  target: 'id_band'
 })

@@ -1,4 +1,5 @@
 import { DataTypes, sequelize } from '../config/config.js'
+import { Album } from './Album.js'
 
 export const Genre = sequelize.define('genre', {
   id_genre: {
@@ -10,4 +11,14 @@ export const Genre = sequelize.define('genre', {
     type: DataTypes.STRING,
     allowNull: false
   }
+})
+
+Album.hasMany(Genre, {
+  foreignKey: 'albumId',
+  sourceKey: 'id_album'
+})
+
+Genre.belongsTo(Album, {
+  foreignKey: 'albumId',
+  target: 'id_album'
 })

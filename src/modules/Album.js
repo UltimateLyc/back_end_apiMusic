@@ -1,4 +1,5 @@
 import { DataTypes, sequelize } from '../config/config.js'
+// import { Band } from './Band.js'
 
 export const Album = sequelize.define('album', {
   id_album: {
