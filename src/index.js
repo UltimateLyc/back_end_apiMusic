@@ -1,5 +1,12 @@
 import { app } from './app.js'
 import { sequelize } from './database/database.js'
+import { Band } from './modules/Band.js'
+import { Genre } from './modules/Genre.js'
+import { Instrument } from './modules/Instrument.js'
+import { Occupation } from './modules/Occupation.js'
+import { Member } from './modules/Member.js'
+import { Album } from './modules/Album.js'
+import { Song } from './modules/Song.js'
 
 async function main () {
   try {
