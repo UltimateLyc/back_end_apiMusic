@@ -1,5 +1,6 @@
 import { app } from './app.js'
 import { sequelize } from './database/database.js'
+/* eslint-disable no-unused-vars */
 import { Band } from './modules/Band.js'
 import { Genre } from './modules/Genre.js'
 import { Instrument } from './modules/Instrument.js'
